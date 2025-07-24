@@ -1,12 +1,47 @@
-# React + Vite
+# 🧠 Epochs - ML & AI Blogging Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Epochs is a full-stack MERN application where Machine Learning Engineers, Data Scientists, and AI enthusiasts can create accounts, share blogs, and build their technical presence. The platform supports secure authentication (email/password & social logins) and is designed for a modern developer community.
 
-Currently, two official plugins are available:
+Applications status: 
+Still not complete -- In progress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✍️ Share technical blogs focused on Machine Learning, AI, and Data Engineering
+- 🔐 JWT + OAuth2 authentication (Google, GitHub, etc.)
+- 👤 Create and manage user profiles
+- 📚 Browse community blog posts
+- 📝 Rich Markdown editor for writing posts
+- 🕵️ Secure routes & role-based permissions (Admin/User)
+- 🔎 Search and filter blogs by tags, title, and author
+- ❤️ Like & comment system
+- 📱 Fully responsive UI with mobile-first design
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React.js** with Context API & Hooks
+- **React Router Dom** for SPA navigation
+- **TailwindCSS** for modern styling
+- **Axios** for API requests
+- **React Markdown** for rendering blogs
+
+### Backend
+- **Node.js** + **Express.js**
+- **MongoDB** with Mongoose ODM
+- **JWT Authentication** + Passport.js
+- **OAuth** (Google / GitHub Login)
+- **Cloudinary** (optional for image uploads)
+
+---
+
+## 🔧 Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/sas3380/Epochs.git
+cd Epochs
