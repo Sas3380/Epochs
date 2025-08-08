@@ -1,13 +1,13 @@
-import mongoose from "mongoose";
+import mongoose,{Schema} from "mongoose";
 
-const viewSchema = new mongoose.Schema({
+const viewSchema = new Schema({
     post: {
-        type: mongoose.Schema.Types.ObjectId, 
+        type: Schema.Types.ObjectId, 
         ref: 'Post',
         required: true
     },
     viewer: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'User'
     },
     viewIp: String, 

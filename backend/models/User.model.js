@@ -22,7 +22,8 @@ const userSchema = new mongoose.Schema({
     bio: {
         type: String,
     },
-    avatarUrl: String, 
+    profileImage: String, 
+    
     socialLinks : {
         github: String, 
         X: String, 
@@ -31,3 +32,9 @@ const userSchema = new mongoose.Schema({
 }, {timestamps: true});
 
 module.exports = mongoose.model("User", userSchema);
+
+//user -> articles(one-to-many)
+//user -> comments
+//user -> likes
+//user -> bookmarks
+//user -> user (many-to-many)

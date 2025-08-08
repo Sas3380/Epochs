@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
+import mongoose, {Schema} from "mongoose";
 
-const postSchema = new mongoose.Schema({
+const postSchema = new Schema({
     author: {
-        type: ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'User',
         required: true 
     },
@@ -10,7 +10,7 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true 
     },
-    slug: {
+    slug: {//for seo friendly urls
         type: String,
         unique: true 
     },
@@ -18,7 +18,7 @@ const postSchema = new mongoose.Schema({
         type: String, 
         required: true 
     },
-    tags: [String],
+    tags: [{type: String}],
     likesCount: {
         type: Number,
         default: 0
@@ -27,11 +27,19 @@ const postSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    viewsCount: {
+        type: Number,
+    },
     isPublished: {
         type: Boolean,
         default: true
     },
-    coverImage: String 
+    coverImage: String,
 },{timestamps: true});
 
 exports.module = mongoose.model("Post", postSchema);
+
+//article -> comments(one-many)
+//article -> likes(same)
+//article -> bookmarks(same)
+//article-> user (one to one)
