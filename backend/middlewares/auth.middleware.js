@@ -3,6 +3,7 @@ import {catchAsync} from "../utils/catchAsync.js"
 import User from "../models/User.model.js"
 import jwt from "jsonwebtoken"
 
+//for route protection
 export const verifyJWT = catchAsync(async(req, res) => {
     try{
         const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer", "");
